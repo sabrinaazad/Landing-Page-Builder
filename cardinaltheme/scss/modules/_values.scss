@@ -1,0 +1,106 @@
+.section--values {
+  padding-bottom: 0;
+  @include tablet {
+    padding-top: 0;
+  }
+  .two-col {
+
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: end;
+      align-items: stretch;
+
+      .col {
+        flex-basis: 50%;
+        overflow: hidden;
+      }
+    }
+
+    @include desktop {
+      max-height: 55em;
+    }
+
+    .col {
+      &:first-child {
+        text-align: center;
+        padding: 1em;
+        @include tablet {
+          padding: 1em;
+          padding-top: 4em;
+          max-width: calc(1180px / 2);
+        }
+
+        .subheading,
+        .heading {
+          color: $white;
+        }
+
+        .list {
+          margin: 2em 0;
+          padding: 2em 1em;
+
+          @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 0;
+            padding-bottom: 0;
+          }
+
+          li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0;
+
+            @include tablet {
+              flex-basis: calc(50% - 1em);
+              margin: 0 0.5em;
+            }
+
+            .icon {
+              flex-basis: 20%;
+
+              img {
+                height: 4em;
+                margin: 0 auto;
+                position: relative;
+              }
+            }
+
+            .title {
+              color: $white;
+              font-size: 1.25em;
+              margin: 1em 0;
+
+              @include tablet {
+                font-size: 1em;
+              }
+            }
+
+            .text {
+              color: $white;
+              flex-basis: 75%;
+              margin-bottom: 2em;
+              font-size: 0.8em;
+            }
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        .image-wrapper {
+          img {
+            display: block;
+            @include tablet {
+              margin-top: -4em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+.section--corporate-sponsors {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .sponsor-level {
+    padding: 1em;
+    text-align: center;
+
+    @include tablet {
+      text-align: left;
+      width: 50%;
+    }
+    .heading {
+      color: $white;
+      padding: 0.5em;
+    }
+  }
+
+  .content-wrapper {
+    .company {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      margin: 2em 0;
+
+      @include tablet {
+        text-align: left;
+
+      }
+
+      @include tablet {
+        flex-direction: row;
+      }
+
+      .logo-wrapper {
+        width: 80%;
+        margin: 1em auto;
+
+        @include tablet {
+          flex-basis: 25%;
+        }
+
+        position: relative;
+
+        &::after {
+          content: " ";
+          width: 6em;
+          height: 0.2em;
+          position: absolute;
+          bottom: -1em;
+          left: 6em;
+
+          @include tablet {
+            width: 0.2em;
+            height: 7em;
+            top: -2em;
+            left: unset;
+            right: -1em;
+          }
+        }
+
+      }
+
+      .details-wrapper {
+        @include tablet {
+          flex-basis: 65%;
+        }
+      }
+    }
+  }
+}

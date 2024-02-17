@@ -1,0 +1,88 @@
+.section--newsletter {
+  color: $white;
+
+  @include tablet {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 8em 2em;
+  }
+
+  .two-col {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      flex-direction: row;
+
+      .col {
+        flex-basis: 50%;
+      }
+    }
+
+    .col {
+      &:first-child {
+        text-align: center;
+
+        @include tablet {
+          text-align: left;
+        }
+
+        .content-wrapper {
+          padding: 3em 1em;
+
+          @include tablet {
+            padding: 3em 2em;
+          }
+
+          .subheading,
+          .heading {
+            color: $white;
+          }
+        }
+
+        .form {
+          padding: 4em 1em 1em;
+          margin: 1em 0;
+
+          @include tablet {
+            padding: 4em 2em 1em;
+          }
+
+          .gform_wrapper.gravity-theme input:not([type=radio]):not([type=checkbox]):not([type=image]):not([type=file]) {
+            border: none;
+            border-radius: 1em;
+
+            @include tablet {
+              padding: 1em;
+            }
+          }
+
+          .name_first {
+            margin-bottom: 1.25em;
+          }
+
+          .gform_footer .gform_button {
+            @extend .btn;
+            color: $white;
+          }
+
+          .gform_wrapper.gravity-theme #field_submit input,
+          .gform_wrapper.gravity-theme .gform_footer input {
+            @include tablet {
+              border-radius: 2em;
+              margin-top: 0;
+            }
+          }
+        }
+      }
+      @include tablet {
+        &:nth-child(2) {
+          .image-wrapper {
+            padding: 0 1em;
+          }
+        }
+      }
+    }
+  }
+}

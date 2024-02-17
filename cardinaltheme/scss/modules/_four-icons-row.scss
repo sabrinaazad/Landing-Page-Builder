@@ -1,0 +1,113 @@
+.section--four-icons-row {
+  @include tablet {
+    padding: 8em 2em;
+  }
+
+  .content-wrapper {
+    max-width: 45em;
+    margin: 0 auto 3em;
+    text-align: center;
+    flex-direction: column;
+
+    .underline-wrapper {
+      left: 7em;
+      top: 0em;
+
+      @include tablet {
+        left: 0;
+      }
+    }
+  }
+
+  .icons-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: center;
+
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .content {
+      margin: 1em;
+
+      @include tablet {
+        flex-basis: calc(25% - 2em);
+      }
+    }
+
+    .icon {
+      height: 4em;
+    }
+
+    .title {
+      font-size: 1.25em;
+    }
+
+    .blurb {
+      font-size: 0.9em;
+      margin: 1em 0;
+    }
+
+    &.lines {
+      @include desktop {
+        .content {
+          .title {
+            position: relative;
+
+            &::after {
+              content: " ";
+              width: 2.5em;
+              height: 0.35em;
+              position: absolute;
+              top: -1.5em;
+              left: 19vw;
+
+              @include regulardesktop {
+                left: 12.75em;
+              }
+
+            }
+          }
+
+          &:nth-child(2) {
+            .title {
+              &::after {
+
+                left: 19.75vw;
+
+                @include regulardesktop {
+                  left: 12.75em;
+                }
+              }
+            }
+          }
+
+          &:nth-child(3) {
+            .title {
+              &::after {
+
+                left: 19.75vw;
+
+                @include regulardesktop {
+                  left: 12.75em;
+                }
+              }
+            }
+          }
+
+          &:nth-child(4n) {
+            .title {
+              &::after {
+                content: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

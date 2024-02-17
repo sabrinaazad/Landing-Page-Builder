@@ -1,0 +1,160 @@
+.section--hero-v3 {
+
+    .content-top-background {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 25em;
+    }
+
+    .content-top {
+        margin: 0 2em;
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+        padding: 0.5em;
+        top: 3.25em;
+        min-height: 25em;
+        position: relative;
+        text-align: center;
+        @include dropShadow();
+
+        @include tablet {
+            text-align: left;
+            padding: 3em 2em;
+            max-width: 28em;
+            z-index: 1;
+        }
+
+        @include desktop {
+            &::after {
+                content: " ";
+                position: absolute;
+                bottom: -15em;
+                left: 0;
+                height: 20em;
+                width: 100%;
+            }
+        }
+
+        .heading {
+            color: $white;
+        }
+
+        p {
+            font-size: 0.8em;
+
+            @include tablet {
+                font-size: 1em;
+            }
+        }
+
+        .btn {
+            width: 100%;
+            display: block;
+            margin-top: 2em;
+            margin-bottom: 4em;
+
+            @include tablet {
+                text-align: center;
+                width: fit-content;
+                padding: 0.75em 6em;
+            }
+        }
+    }
+
+    .content-bottom {
+        padding: 2em 1em;
+        text-align: center;
+
+        @include tablet {
+            text-align: left;
+            padding: 4em 2em 2em;
+        }
+
+        @include desktop {
+            .two-col {
+                display: flex;
+                justify-content: space-between;
+
+                .col {
+                    flex-basis: 48%;
+                    width: 48%;
+                }
+            }
+        }
+
+        .bottom_slider {
+            margin-bottom: 4em;
+
+            .slide {
+                padding: 0;
+
+                img {
+                    @include borderRadius();
+                }
+            }
+
+            @include tablet {
+                margin-bottom: 1em;
+                z-index: 2;
+            }
+        }
+
+        @include tablet {
+            .bottom_slider_2 {
+                margin-bottom: 2em;
+
+                .slide {
+                    padding: 0.5em;
+
+                    img {
+                        @include borderRadius();
+                    }
+                }
+            }
+        }
+
+        .subheading,
+        .heading,
+        p {
+            color: $white;
+        }
+
+        .heading {
+            position: relative;
+            margin-bottom: 1.5em;
+
+            &::after {
+                content: " ";
+                position: absolute;
+                bottom: -0.75em;
+                left: 25%;
+                width: 50%;
+                height: 0.1em;
+                background: $white;
+
+                @include tablet {
+                    left: 0;
+                    width: 30%;
+                }
+            }
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        .btn {
+            width: 100%;
+            display: block;
+            margin-top: 2em;
+            margin-bottom: 2em;
+
+            @include tablet {
+                text-align: center;
+                width: fit-content;
+                padding: 0.75em 6em;
+            }
+        }
+    }
+}

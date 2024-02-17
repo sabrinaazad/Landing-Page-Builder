@@ -1,0 +1,104 @@
+.section--packages {
+  .heading-wrapper {
+    max-width: 45em;
+    margin: 0 auto;
+    padding: 3em;
+    color: $white;
+    text-align: center;
+
+    .subheading {
+      color: $white;
+    }
+
+    .heading {
+      color: $white;
+    }
+  }
+  
+  .package-slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .package {
+      background-color: $white;
+      @include borderRadius();
+      @include dropShadow();
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      margin: 1em;
+      padding: 2em;
+      border-width: 0.25em;
+      border-style: solid;
+
+      @include tablet {
+        width: 22em;
+      }
+
+      .title {
+        text-transform: uppercase;
+        position: relative;
+        margin: 1em 0 2em 0;
+        display: block;
+        text-align: center;
+        font-size: 1.5em;
+        position: relative;
+
+        &::after {
+          content: " ";
+          top: 3em;
+          left: 2em;
+          width: 6em;
+          height: 0.2em;
+          position: absolute;
+
+          @include tablet {
+            top: 1.5em;
+            left: 3em;
+          }
+        }
+      }
+
+      .price {
+        margin: 0;
+        width: 5em;
+        text-align: center;
+        width: 100%;
+        font-size: 1.5em;
+      }
+
+      ul {
+        list-style: none;
+
+        li {
+          position: relative;
+
+          &::before {
+            content: "\2022";
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            font-size: 3em;
+            position: absolute;
+            top: -0.5em;
+            left: 0.5em;
+          }
+        }
+      }
+
+      .btn {
+        text-align: center;
+      }
+    }
+  }
+
+}

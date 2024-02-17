@@ -1,0 +1,136 @@
+.section--process {
+  .content-wrapper {
+    margin: 2em auto;
+    text-align: center;
+    max-width: 50em;
+
+    .subheading,
+    .heading,
+    .blurb {
+      color: $white;
+    }
+  }
+
+  .process-timeline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include tablet {
+      flex-direction: row;
+    }
+
+    .process {
+      @include tablet {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+
+        &:nth-child(even) {
+          .image-wrapper {
+            order: 2;
+            border-left: 0.25em solid $white;
+            position: relative;
+
+            &::after {
+              content: " ";
+              position: absolute;
+              top: 0;
+              left: -0.85em;
+              width: 1.5em;
+              height: 1.5em;
+              border-radius: 50%;
+              background-color: $white;
+            }
+          }
+
+          .text-wrapper {
+            order: 1;
+            border: none;
+
+            &::after {
+              content: none;
+            }
+          }
+        }
+      }
+
+      &:last-child {
+
+        .image-wrapper,
+        .text-wrapper {
+          border: none;
+        }
+
+        .image-wrapper {
+          &::after {
+            left: -0.75em;
+          }
+        }
+      }
+
+      .image-wrapper {
+        padding: 1em;
+        padding-left: 2em;
+        border-left: 0.5em solid $white;
+        position: relative;
+
+        &::after {
+          content: " ";
+          position: absolute;
+          top: 0;
+          left: -1.25em;
+          width: 2em;
+          height: 2em;
+          border-radius: 50%;
+          background-color: $white;
+        }
+
+        @include tablet {
+          padding: 3em;
+          flex-basis: 50%;
+          padding-left: 3em;
+          border: none;
+
+          &::after {
+            content: none;
+          }
+        }
+
+      }
+
+      .text-wrapper {
+        color: $white;
+        padding: 1em;
+        padding-left: 2em;
+        border-left: 0.5em solid $white;
+
+        h3 {
+          color: $white;
+        }
+
+        @include tablet {
+          padding: 3em;
+          flex-basis: 50%;
+          padding-left: 3em;
+          padding-top: 0;
+          position: relative;
+          border-width: 0.25em;
+
+          &::after {
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: -0.85em;
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 50%;
+            background-color: $white;
+          }
+        }
+      }
+    }
+  }
+}

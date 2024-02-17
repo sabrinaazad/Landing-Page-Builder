@@ -1,0 +1,45 @@
+.section--statistics {
+  text-align: center;
+
+  @include tablet {
+    padding: 6em 2em;
+  }
+
+  .panels {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+
+    @include tablet {
+      flex-direction: row;
+    }
+
+    .panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+      margin: 1em;
+      padding: 1em;
+
+      .icon {
+        margin: 0.25em 0;
+        height: 3em;
+      }
+
+      .number {
+        font-size: 3em;
+      }
+
+      .title {
+        text-align: center;
+        padding-bottom: 1em;
+        border-bottom-style: solid;
+        border-bottom-width: 0.2em;
+      }
+    }
+  }
+}

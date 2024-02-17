@@ -1,0 +1,109 @@
+.section--how-it-works {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .heading-wrapper {
+    max-width: 50em;
+    margin: 0 auto;
+  }
+
+  .steps-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .panel {
+      background-color: $white;
+      position: relative;
+      padding: 2em;
+      margin: 4em 0;
+      border-radius: 50%;
+      width: 20em;
+      height: 20em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      @include dropShadow();
+
+      h4 {
+        max-width: 10em;
+      }
+
+      &::after {
+        content: " ";
+        position: absolute;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 5em;
+        height: 10em;
+        bottom: -9em;
+        left: 7.5em;
+      }
+
+      &:last-child {
+        &::after {
+          content: none;
+        }
+      }
+    }
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .panel {
+        width: 10em;
+        height: 10em;
+
+        &::after {
+          content: none;
+        }
+
+        &:hover {
+          .icon {
+            transform: scale(1.1);
+          }
+        }
+
+        .icon {
+          width: 3em;
+          @include transitionAll();
+        }
+
+        h4 {
+          font-size: 1em;
+        }
+      }
+    }
+
+    @include desktop {
+      .panel {
+        width: 13em;
+        height: 13em;
+
+        .icon {
+          width: 5em;
+        }
+      }
+    }
+
+    @include regulardesktop {
+      .panel {
+        &::after {
+          content: " ";
+          width: 2.5em;
+          height: 3em;
+          bottom: unset;
+          left: 120%;
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+}

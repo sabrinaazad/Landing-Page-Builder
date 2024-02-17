@@ -1,0 +1,76 @@
+.section--memberships {
+  background-position: bottom left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+
+  .heading-wrapper {
+    max-width: 50em;
+    margin: 0 auto;
+  }
+
+  .memberships_slider {
+    margin: 4em 0;
+
+    .panel {
+      background-color: $white;
+      border-radius: 1.5em;
+      border-style: solid;
+      border-width: 1px;
+      text-align: center;
+      flex-direction: column;
+      align-items: stretch;
+      padding: 0;
+      @include tablet {
+        margin: 1em;
+      }
+
+      h4,
+      .price,
+      .detail {
+        padding: 1em;
+      }
+
+      h4 {
+        color: $white;
+        margin: 0;
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+      }
+
+      .price {
+        position: relative;
+
+        .dollar {
+          font-size: 3.5em;
+        }
+
+        .cent {
+          position: absolute;
+          top: 0.75em;
+          font-size: 1.5em;
+          padding-left: 0.25em;
+
+          &::after {
+            content: "Monthly";
+            position: absolute;
+            top: 1.75em;
+            font-size: 0.6em;
+            left: 0.25em;
+          }
+        }
+      }
+
+      .button-wrapper {
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+        margin: 0;
+        padding: 2em;
+
+        .btn {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

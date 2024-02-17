@@ -1,0 +1,51 @@
+.section--icons-panel {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .heading-wrapper {
+    max-width: 45em;
+    margin: 0 auto;
+  }
+
+  .icons-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 0;
+
+    .panel {
+      padding: 1em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      .icon {
+        height: 5em;
+        margin-bottom: 1em;
+        @include transition(250ms);
+
+        &:hover {
+          transform: scale(1.2);
+        }
+
+        img {
+          height: 100%;
+        }
+      }
+    }
+
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 4em 0 2em;
+
+      .panel {
+        flex-basis: 20%;
+      }
+    }
+  }
+}

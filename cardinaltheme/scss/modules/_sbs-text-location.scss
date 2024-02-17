@@ -1,0 +1,92 @@
+.section--sbs-text-location {
+    padding-bottom: 0;
+    padding-top: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .two-col {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: stretch;
+            overflow: hidden;
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+        .col {
+            &:nth-child(2) {
+                @include tablet {
+                    flex-basis: 45%;
+                }
+
+                .location-wrapper {
+                    padding: 1em;
+                    max-width: 25em;
+                    @include dropShadow();
+                   
+                    .map {
+                        margin: 1em auto;
+                        text-align: center;
+                        padding-top: 2em;
+                        @include tablet {
+                            padding-top: 0;
+                        }
+                    }
+                }
+            }
+
+            &:first-child {
+                text-align: center;
+                padding: 2em 1em;
+
+                @include tablet {
+                    max-width: calc(1180px / 1.8);
+                    text-align: left;
+                    padding: 4em;
+                    flex-basis: 60%;
+                }
+
+                .blurb {
+                    padding-bottom: 2em;
+                }
+
+                .button-wrapper {
+                    margin: 2em 0;
+                    flex-wrap: wrap;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+
+                    @include tablet {
+                        justify-content: flex-start;
+
+                        .btn:first-child {
+                            margin-right: 1em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.reverse {
+        .two-col {
+            justify-content: end;
+
+            .col {
+                &:first-child {
+                    order: 2;
+                }
+
+                &:nth-child(2) {
+                    max-width: calc(1180px / 1.65);
+                    padding-left: 1em;
+                }
+            }
+        }
+    }
+}

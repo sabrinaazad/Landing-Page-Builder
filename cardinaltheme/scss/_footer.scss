@@ -1,0 +1,74 @@
+/************************************************************************/
+/**************************** FOOTER STYLES *****************************/
+/************************************************************************/
+
+.footer {
+    text-align: center;
+    .logo-container {
+        margin: 0 auto;
+        img {
+            max-width: 15em;
+        }
+    }
+    .icons-container {
+        margin: 2em 0;
+        .icon {
+            margin: 0 0.25em;
+            img {
+                width: 25px;
+                height: 25px;
+                @include transitionAll();
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    .menu-container {
+        .footer-nav {
+            padding-left: 0;
+            list-style-type: none;
+            text-align: center;
+            li {
+                padding: 1em 0.5em;
+                a {
+                    color: $white;
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+                &.btn {
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0;
+                    width: 10em;
+                    height: 2.5em;
+                    min-width: 10em;
+                    &:hover {
+                        a {
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+            @include tablet {
+                flex-basis: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+        }
+    }
+    .info-container {
+        text-align: center;
+        font-size: 0.75em;
+        max-width: 50em; 
+        margin: 0 auto;
+        a {
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}

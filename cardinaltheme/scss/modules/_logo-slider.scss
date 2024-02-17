@@ -1,0 +1,15 @@
+.section--logo-slider {
+  padding: 1em;
+  z-index: 2;
+  position: relative;
+
+  @include desktop {
+    @include dropShadow();
+  }
+
+  .slide {
+    img {
+      max-width: 10em;
+    }
+  }
+}

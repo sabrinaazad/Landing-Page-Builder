@@ -1,0 +1,30 @@
+.section--banner-cta {
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .section-wrapper {
+    max-width: 50em;
+
+    .button-wrapper {
+      margin: 2em auto 1em;
+      display: flex;
+      flex-wrap: wrap;
+
+      @include tablet {
+        justify-content: center;
+      }
+
+      .btn {
+        margin: 1em;
+        flex-basis: 100%;
+        min-width: unset;
+
+        @include tablet {
+          flex-basis: 35%;
+        }
+      }
+    }
+  }
+}

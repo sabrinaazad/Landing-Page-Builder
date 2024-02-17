@@ -1,0 +1,29 @@
+.section--featured-logos {
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .heading-wrapper {
+    max-width: 60em;
+    margin: auto;
+  }
+
+  .logos-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 0;
+
+    .logo {
+      padding: 1em;
+      max-width: 16em;
+      max-height: 6em
+    }
+  }
+
+  .footnote {
+    font-size: 0.75em;
+  }
+}

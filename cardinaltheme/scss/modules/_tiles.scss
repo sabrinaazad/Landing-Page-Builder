@@ -1,0 +1,43 @@
+.section--tiles {
+  text-align: center;
+
+  .tiles_slider {
+    margin: 4em 0;
+    .slick-slide {
+      display: block;
+
+      >div {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        .slide {
+          text-align: center;
+          display: block;
+          position: relative;
+          margin: 1em;
+    
+          .icon {
+            width: 10em;
+            margin: 0.5em auto;
+            padding: 1em;
+    
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+    
+          .title {
+            font-size: 1em;
+          }
+        }
+      }
+    }
+  }
+
+  .btn {
+    min-width: auto;
+    margin: 2em 0;
+    display: inline-block;
+  }
+}

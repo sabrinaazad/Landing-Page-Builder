@@ -1,0 +1,157 @@
+.section--services-location {
+  text-align: center;
+
+  .content-wrapper {
+    max-width: 50em;
+    margin: 0 auto;
+    padding: 1em;
+  }
+  .two-col .col:nth-child(2)::after {
+        content: " ";
+        width: 400%;
+        height: 100%;
+        top: 0;
+        left: 99%;
+        position: absolute;
+    }
+  @include tablet {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .two-col {
+      display: flex;
+
+      .col {
+        &:first-child {
+          flex-basis: 65%;
+          padding: 6em 1em 2em;
+          max-width: calc(1180px / 2);
+          margin-right: 0;
+          margin-left: auto;
+        }
+
+        &:nth-child(2) {
+          flex-basis: 35%;
+          max-width: calc(1180px / 2.25);
+          margin-left: 0;
+          margin-right: auto;
+          position: relative;
+          .map-wrapper {
+            padding: 1em;
+          }
+        }
+      }
+    }
+  }
+
+  @include desktop {
+    .two-col .col:nth-child(2) .map-wrapper {
+      padding: 3em 3em 0;
+    }
+  }
+
+  .services_slider {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 4em 0;
+
+    .slick-slide {
+      display: block;
+    }
+
+    .slide {
+      text-align: center;
+      display: block;
+      position: relative;
+      margin: 1em 0;
+
+      @include tablet {
+        display: flex;
+        flex-basis: 50%;
+      }
+
+      .icon {
+        width: 15em;
+        height: 15em;
+        margin: 0 auto;
+        padding: 2em;
+        background-color: $white;
+        border-radius: 50%;
+        border-style: solid;
+        border-width: 0.15em;
+        @include transitionAll();
+        @include dropShadow();
+
+        @include tablet {
+          width: 5em;
+          height: 4em;
+          padding: 0.5em;
+          border-width: 0.15em;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .title {
+        color: $white;
+        width: 80%;
+        padding: 1em;
+        margin: 0 auto;
+        margin-top: -1em;
+        min-height: 4.5em;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        @include dropShadow();
+        @include transitionAll();
+
+        @include tablet {
+          width: 100%;
+          margin-top: unset;
+          min-height: unset;
+          background-color: $transparent;
+          box-shadow: unset;
+          justify-content: flex-start;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .panels {
+    color: $white;
+    padding-bottom: 2em;
+
+    a {
+      color: $white;
+    }
+
+    .label {
+      margin: 2em 0;
+      font-size: 1.5em;
+    }
+
+    .btn {
+      padding: 1em 2em;
+    }
+
+    .panel {
+      display: flex;
+      align-items: flex-start;
+      margin: 3em 1em;
+      text-align: left;
+
+      @include tablet {
+        margin: 3em 1em 3em 2em;
+      }
+
+      img {
+        width: 1.5em;
+        margin: 0 1em;
+      }
+    }
+  }
+}

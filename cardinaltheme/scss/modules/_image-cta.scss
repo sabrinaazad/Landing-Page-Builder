@@ -1,0 +1,78 @@
+.section--image-cta {
+  .two-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+      flex-direction: row;
+    }
+
+    .col {
+      &:first-child {
+        @include tablet {
+          flex-basis: 40%;
+        }
+
+        .image-wrapper {
+          padding: 10em;
+          width: 100vw;
+          position: relative;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+
+          @include tablet {
+            background-position: center right;
+            width: auto;
+            height: 45vh;
+          }
+
+          &.featured {
+            padding: 2em;
+
+            @include tablet {
+              height: unset;
+              margin-right: 0;
+              margin-left: auto;
+              max-width: 30em;
+            }
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        @include tablet {
+          flex-basis: 60%;
+        }
+
+        .section-wrapper {
+          color: $white;
+          text-align: center;
+          padding: 2em;
+          max-width: calc(1180px / 1.65);
+
+          @include tablet {
+            text-align: left;
+            margin-left: 0;
+          }
+
+          .heading,
+          .subheading {
+            color: $white;
+          }
+
+          .button-wrapper {
+            display: inline-block;
+            margin: 2em 0;
+
+            .btn {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

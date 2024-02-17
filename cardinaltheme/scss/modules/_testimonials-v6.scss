@@ -1,0 +1,105 @@
+.section--testimonials-v6 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 10em;
+    
+    .featured-image {
+      position: relative;
+      margin: 0 auto;
+      z-index: 0;
+    }
+  
+    .content-wrapper {
+      width: 90%;
+      margin: auto;
+      padding: 3em 0;
+
+      @include tablet {
+        padding: 1em;
+        width: 100%;
+      }
+    }
+  
+    .testimonials_slider_v6 {
+        @include tablet {
+            display: grid;
+            grid-template-columns: repeat(24, 1fr);
+        }
+      .slide {
+        padding: 1em;
+        position: relative;
+        flex-direction: column;
+        background-color: $white;
+        text-align: left;
+        margin: 3em auto;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        @include borderRadius();
+        @include tablet {
+            margin: 1em auto;
+            &:first-child {
+                grid-column: 1 / 8;
+                grid-row: 1 / 8;
+            }
+            &:nth-child(2) {
+                grid-column: 9 / 16;
+                grid-row: 3 / 8;
+            }
+            &:nth-child(3) {
+                grid-column: 18 / 25;
+                grid-row: 1 / 6;
+            }
+            &:nth-child(4) {
+                grid-column: 17 / 25;
+                grid-row: 6 / 8;
+            }
+        }
+        @include desktop {
+          padding: 2em 4em 4em;
+        }
+  
+        &::before {
+          content: " ";
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 3em;
+          height: 4em;
+          position: absolute;
+          top: -2em;
+          left: 1em;
+        }
+  
+        &::after {
+          content: " ";
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 3em;
+          height: 4em;
+          position: absolute;
+          bottom: -2em;
+          right: 1em;
+          transform: rotate(180deg);
+        }
+      }
+  
+      .slick-dots {
+        li {
+          button:before {
+            opacity: 1;
+            font-size: 15px;
+          }
+  
+          &.slick-active {
+            button:before {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }

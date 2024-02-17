@@ -1,0 +1,64 @@
+.section--three-panels {
+    background-position: top;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+
+    .panel {
+        background-color: $white;
+        @include borderRadius();
+        margin: 1em 0;
+        padding: 1em;
+        border-width: 0.5em;
+        border-style: solid;
+
+        img {
+            height: 100px;
+            width: auto;
+        }
+    }
+
+    @include tablet {
+        .two-col {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: top;
+
+            .col:first-child {
+                flex-basis: 35%;
+            }
+
+            .col:nth-child(2) {
+                flex-basis: 60%;
+            }
+        }
+    }
+
+    @include desktop {
+        padding: 4em 2em;
+
+        .two-col {
+            align-items: center;
+        }
+
+        .panels {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .panel {
+                flex-basis: 32%;
+
+                h4 {
+                    font-size: 1em;
+                }
+
+                p {
+                    font-size: 0.75em;
+                }
+            }
+        }
+    }
+}

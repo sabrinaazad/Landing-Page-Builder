@@ -1,0 +1,108 @@
+.section--sbs-image-text {
+  padding-bottom: 0;
+  padding-top: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  .two-col {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: stretch;
+      min-height: 40em;
+      overflow: hidden;
+
+    }
+
+    @include desktop {
+      min-height: 30em;
+    }
+
+    .col {
+      &:first-child {
+        @include tablet {
+          flex-basis: 45%;
+        }
+
+        .image-wrapper {
+          padding-bottom: 25em;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+
+          @include tablet {
+            padding-bottom: 52em;
+          }
+
+          @include desktop {
+            padding-bottom: 42em;
+          }
+
+        }
+      }
+
+      &:nth-child(2) {
+        text-align: center;
+        padding: 2em 1em;
+
+        @include tablet {
+          max-width: calc(1180px / 1.8);
+          text-align: left;
+          padding: 4em;
+          flex-basis: 60%;
+        }
+
+        .blurb {
+          padding-bottom: 2em;
+        }
+
+        .button-wrapper {
+          margin: 2em 0;
+          flex-wrap: wrap;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          @include tablet {
+            justify-content: flex-start;
+            .btn:first-child {
+              margin-right: 1em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.reverse {
+    @include tablet {
+      .two-col {
+        justify-content: end;
+
+        .col {
+          &:first-child {
+            order: 2;
+          }
+
+          &:nth-child(2) {
+            max-width: calc(1180px / 1.65);
+            padding-left: 1em;
+          }
+        }
+      }
+    }
+
+    @include regulardesktop {
+      .two-col {
+        .col {
+          &:nth-child(2) {
+            padding: 4em;
+          }
+        }
+      }
+    }
+  }
+}

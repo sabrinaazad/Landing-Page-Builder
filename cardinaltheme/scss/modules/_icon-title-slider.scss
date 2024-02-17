@@ -1,0 +1,79 @@
+.section--icon-title-slider {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+
+  .content {
+    max-width: 50em;
+    margin: 0 auto;
+  }
+
+  .icon_title_slider {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 4em 0;
+    justify-content: center;
+
+    .slick-slide {
+      display: block;
+    }
+
+    .slide {
+      text-align: center;
+      display: block;
+      position: relative;
+      margin: 1em 0;
+
+      >div {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        margin: 1em;
+      }
+
+      .icon {
+        width: 10em;
+        height: 10em;
+        margin: 0 auto;
+        background-color: $white;
+        border-radius: 50%;
+        padding: 1.5em;
+        border-style: solid;
+        border-width: 0.35em;
+        @include transitionAll();
+        @include dropShadow();
+        @include tablet {
+          width: 8em;
+          height: 8em;
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .title {
+        min-height: 2.5em;
+        padding: 1em;
+        text-transform: uppercase;
+        color: $white;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: -1em;
+        min-height: 4.5em;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        @include dropShadow();
+        @include transitionAll();
+      }
+    }
+  }
+
+  .btn {
+    margin: 2em 0;
+    display: inline-block;
+  }
+}

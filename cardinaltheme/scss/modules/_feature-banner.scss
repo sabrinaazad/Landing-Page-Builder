@@ -1,0 +1,111 @@
+.section--feature-banner {
+  margin-top: 32em;
+
+  @include tablet {
+    margin-top: 0;
+  }
+
+  @include desktop {
+    margin-top: 5em;
+  }
+
+  .two-col {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    .col {
+      &:first-child {
+        position: absolute;
+        bottom: 25.25em;
+
+        @include tablet {
+          bottom: -4.25em;
+          width: 18em;
+        }
+
+        @include desktop {
+          bottom: -4.25em;
+          width: 21em;
+        }
+
+        .featured-image-wrapper {
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+
+        }
+      }
+
+      &:last-child {
+        text-align: center;
+
+        .banners_slider {
+          &.slick-slider .slick-next {
+            right: -15px;
+            top: 40%;
+
+            &::before {
+              content: "\f0da";
+              font-size: 4rem;
+            }
+          }
+
+          &.slick-slider .slick-prev {
+            left: -15px;
+            top: 40%;
+
+            &::before {
+              content: "\f0d9";
+              font-size: 4rem;
+            }
+          }
+
+          @include tablet {
+            max-width: 28em;
+            margin-right: 0;
+            margin-left: auto;
+            padding-right: 1em;
+            padding-left: 1em;
+
+            &.slick-slider .slick-next {
+              right: 40%;
+              bottom: -1rem;
+              top: unset;
+
+              &::before {
+                top: 0;
+              }
+            }
+
+            &.slick-slider .slick-prev {
+              left: 40%;
+              bottom: -1rem;
+              top: unset;
+
+              &::before {
+                top: 0;
+              }
+            }
+          }
+
+          @include desktop {
+            max-width: 40em;
+          }
+
+          @include regulardesktop {
+            max-width: 45em;
+          }
+
+          .banner {
+            flex-direction: column;
+
+            .button-wrapper {
+              margin: 2em 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

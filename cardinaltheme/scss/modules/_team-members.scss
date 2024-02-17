@@ -1,0 +1,104 @@
+.section--team-members {
+    text-align: center;
+
+    .content-wrapper {
+        margin: 0 auto;
+        max-width: 50em;
+        flex-direction: column;
+    }
+
+    .team_slider {
+
+        .slide {
+            display: flex !important;
+            flex-direction: column;
+
+            .image-wrapper {
+                width: 80%;
+                margin: 2em auto;
+
+                img {
+                    border-radius: 50%;
+                    border-width: 0.5em;
+                    border-style: solid;
+                }
+            }
+
+            .name {
+                font-size: 1.25em;
+                margin: 1em 0;
+                text-transform: uppercase;
+            }
+
+            .title {
+                font-size: 1em;
+                text-transform: uppercase;
+                font-style: italic;
+            }
+
+            .btn {
+                display: block;
+            }
+        }
+    }
+
+    .team_slider_2 {
+        margin: 2em 0;
+
+        &.slick-slider .slick-track {
+            margin: 0;
+        }
+
+        .slick-list {
+            padding: 2em !important;
+        }
+
+        .slide {
+
+            img {
+                min-width: 3.5em;
+                border-radius: 50%;
+                border-width: 0.25em;
+                border-style: solid;
+            }
+        }
+    }
+
+    @include tablet {
+        .team_slider {
+            .slide {
+                flex-direction: row;
+                justify-content: space-between;
+
+                .image-wrapper {
+                    flex-basis: 30%;
+
+                }
+
+                .content {
+                    flex-basis: 65%;
+                    text-align: left;
+
+                    .btn {
+                        display: inline-block;
+                        min-width: unset;
+                    }
+                }
+            }
+        }
+
+        .team_slider_2 {
+            max-width: 45em;
+            margin: 1em auto;
+
+            .slide {
+                margin: 0.5em 0;
+
+                img {
+                    max-width: 10em;
+
+                }
+            }
+        }
+    }
+}

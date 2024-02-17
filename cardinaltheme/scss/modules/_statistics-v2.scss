@@ -1,0 +1,58 @@
+.section--statistics-v2 {
+    padding: 6em 2em;
+
+    .panels {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+
+        @include tablet {
+            flex-direction: row;
+        }
+
+        .panel {
+            background-color: $white;
+            @include borderRadius();
+            @include dropShadow();
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            margin: 1em;
+            padding: 1em;
+
+            @include tablet {
+                flex-basis: calc(33% - 2em);
+            }
+
+            .icon-wrapper {
+                flex-basis: 35%;
+
+                .icon {
+                    margin: 1em 0;
+                    width: 5em;
+                }
+            }
+
+            .stat-wrapper {
+                flex-basis: 60%;
+
+                .number {
+                    display: inline;
+                }
+
+                .percent {
+                    font-size: 2em;
+                    font-weight: 700;
+                }
+
+                .title {
+                    text-transform: uppercase;
+                    font-family: MontserratRegular;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,66 @@
+.section--sbs-info-services {
+    .two-col {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+        }
+        .col:first-child {
+            @include tablet {
+                flex-basis: 48%;
+            }
+            @include desktop {
+                flex-basis: 30%;
+            }
+            .image-wrapper {
+                img {
+                    border-top-right-radius: 14em;
+                    @include tablet {
+                        border-top-right-radius: 0;
+                        border-bottom-left-radius: 14em;
+                    }
+                }
+            }
+            .button-wrapper {
+                margin: 3em 0;
+            }
+        }
+        .col:nth-child(2) {
+            @include tablet {
+                flex-basis: 48%;
+            }
+            @include desktop {
+                flex-basis: 65%;
+            }
+            .service_boxes_slider {
+                @include tablet {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+                .box {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background: $white;
+                    margin: 2em 0;
+                    padding: 2em;
+                    border-radius: 0.5em;
+                    border-bottom-right-radius: 5em;
+                    @include dropShadow();
+                    @include tablet {
+                        margin: 0.5em;
+                        padding: 1em;
+                        width: 14em;
+                    }
+                    .icon {
+                        width: 5em;
+                    }
+                    .title {
+                        margin-top: 1em;
+                        text-align: left;
+                        font-size: 1.25em;
+                    }
+                }
+            }
+        }
+    }
+}

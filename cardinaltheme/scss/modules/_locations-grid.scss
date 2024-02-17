@@ -1,0 +1,41 @@
+.section--locations-grid {
+    .content {
+        max-width: 50em;
+        margin: 0 auto;
+    }
+    .locations_slider {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        .location-wrapper {
+            max-width: 25em;
+            @include dropShadow();
+            @include tablet {
+                margin: 1em;
+                margin-top: 2em;
+                flex-basis: calc(50% - 1em);
+            }
+            .map {
+                text-align: center;
+                @include tablet {
+                    padding-top: 2em;
+                }
+            }
+            .button-wrapper {
+                margin: 2em auto;
+                @include tablet {
+                    margin: 1em 0 3em;
+                }
+                .btn {
+                    display: block;
+                    width: 15em;
+                    margin: auto;
+                    
+                }
+            }
+        }
+    }
+}
+
+    

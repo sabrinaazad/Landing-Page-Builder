@@ -1,0 +1,42 @@
+.section--faqs-v4 {
+    .heading-wrapper {
+        max-width: 50em;
+        margin: 0 auto;
+    }
+
+    .faqs-wrapper {
+        @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .faq {
+            flex-basis: 48%;
+            margin: 1em 0;
+
+            .question {
+                font-size: 1em;
+                position: relative;
+                cursor: pointer;
+                padding-left: 2em;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0.5em;
+                    border-radius: 50%;
+                    width: 0.5em;
+                    height: 0.5em;
+                }
+            }
+
+            .answer {
+                display: none;
+                padding-top: 1em;
+                padding-left: 2em;
+            }
+        }
+    }
+}

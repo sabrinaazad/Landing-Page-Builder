@@ -1,0 +1,69 @@
+.section--sbs-image-text-v2 {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .two-col {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1180px;
+
+    @include tablet {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+
+      .col {
+        flex-basis: 45%;
+      }
+    }
+
+    .col {
+      &:nth-child(2) {
+        text-align: center;
+
+        @include tablet {
+          text-align: left;
+        }
+
+        .button-wrapper {
+          margin: 2em 0;
+          flex-wrap: wrap;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+
+          @include tablet {
+            justify-content: flex-start;
+
+            a:first-child {
+              margin-right: 1em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.reverse {
+    .two-col {
+      .col {
+        &:first-child {
+          order: 2;
+        }
+
+        &:nth-child(2) {
+          order: 1;
+        }
+      }
+    }
+  }
+
+  &.out-of-bound {
+    margin-top: 10em;
+    .featured-image-wrapper {
+      margin-top: -12em;
+      padding-bottom: 2em;
+    }
+  }
+}
